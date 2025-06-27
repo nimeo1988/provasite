@@ -1,16 +1,16 @@
 /* style.css */
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: rgba(245, 249, 252, 0.7); /* celeste chiaro trasparente */
   color: #333;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   max-width: 900px;
-  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header {
@@ -36,7 +36,6 @@ nav {
   background: #0073e6;
   padding: 0.5rem 0;
   border-radius: 6px;
-  margin-bottom: 1.5rem;
 }
 
 nav ul {
@@ -80,6 +79,26 @@ section h2 {
 ul, ol {
   padding-left: 1.3rem;
   font-size: 1.1rem;
+}
+
+/* Nuovo stile per la lista con emoji allineate */
+.flex-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.flex-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.flex-list li .emoji {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  user-select: none;
 }
 
 ul li, ol li {
@@ -199,23 +218,4 @@ pre {
   form input, form textarea, form button {
     font-size: 1rem;
   }
-  .flex-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.flex-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.7rem;
-}
-
-.flex-list li .emoji {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-  line-height: 1;
-  user-select: none;
-}
-
 }
