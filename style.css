@@ -1,6 +1,6 @@
-/* Stile per articolo notizie con immagine affiancata */
 .notizia-clickfix {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
   background: #e6f0ff;
