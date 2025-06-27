@@ -5,6 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PROVA - Social Engineering e Cyber Security</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e1621;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0 20px;
+    }
+    header {
+      background-color: #031c2a;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #1f8ecd;
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      color: #1f8ecd;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #a1c3e8;
+      margin: 0;
+    }
+    section {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #1f8ecd;
+      border-bottom: 2px solid #1f8ecd;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      color: #72b8f9;
+      margin-top: 30px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    a {
+      color: #72b8f9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+    form button {
+      margin-top: 20px;
+      background-color: #1f8ecd;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #155a8a;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9em;
+      color: #7b7b7b;
+      background-color: #031c2a;
+      border-top: 1px solid #1f8ecd;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -52,12 +147,12 @@
   <section id="contatti">
     <h2>Contattaci</h2>
     <form action="mailto:info@prova.it" method="post" enctype="text/plain">
-      <label for="nome">Nome</label><br />
-      <input type="text" id="nome" name="nome" required /><br />
-      <label for="email">Email</label><br />
-      <input type="email" id="email" name="email" required /><br />
-      <label for="messaggio">Messaggio</label><br />
-      <textarea id="messaggio" name="messaggio" required></textarea><br />
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" required></textarea>
       <button type="submit">Invia messaggio</button>
     </form>
     <p>Oppure scrivici a: <a href="mailto:info@prova.it">info@prova.it</a></p>
