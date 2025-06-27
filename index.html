@@ -3,101 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Notizia ClickFix - PROVA</title>
+  <title>PROVA - Social Engineering & Cyber Security</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
       background-color: #0a0f24;
       color: #f0f2f5;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
-    h1 {
-      color: #00bfff;
-      font-weight: 900;
-      font-size: 2.4rem;
-      margin-bottom: 20px;
+    header {
+      background-color: #0e1433;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    h2 {
-      color: #00bfff;
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
       font-weight: 800;
-      margin-top: 40px;
-      margin-bottom: 15px;
+      letter-spacing: 2px;
+      color: #00bfff;
     }
-    p, li {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
+    nav a {
+      margin-left: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00bfff;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1581093588401-735a94f105c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: white;
+      box-shadow: inset 0 0 0 1000px rgba(10, 15, 36, 0.75);
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: auto;
       font-weight: 400;
     }
-    ul {
-      margin-left: 20px;
-      margin-bottom: 30px;
+    .section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
-    li {
-      margin-bottom: 12px;
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #00bfff;
+      border-bottom: 2px solid #00bfff;
+      padding-bottom: 8px;
+      font-weight: 800;
+    }
+    .section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      font-weight: 400;
     }
     .image-container {
       text-align: center;
-      margin: 20px 0 40px;
+      margin: 30px 0;
     }
     .image-container img {
       max-width: 100%;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
+    }
+    .services ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .services li {
+      background-color: #161c3a;
+      margin: 12px 0;
+      padding: 18px 20px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.1);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    .services li:hover {
+      background-color: #00bfff;
+      color: #0a0f24;
+    }
+    form label {
+      display: block;
+      margin: 18px 0 6px;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background-color: #1b2349;
+      color: #f0f2f5;
+      resize: vertical;
+      transition: background-color 0.3s ease;
+    }
+    form input:focus, form textarea:focus {
+      background-color: #27335c;
+      outline: none;
+    }
+    form button {
+      margin-top: 25px;
+      padding: 15px 30px;
+      background-color: #00bfff;
+      color: #0a0f24;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #0095d6;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background-color: #0e1433;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    @media(max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Quando il copia e incolla diventa un'arma: come difendersi dalla tattica ClickFix</h1>
-  
-  <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
-  
-  <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi.</p>
-  
-  <p>Gli attaccanti utilizzano due principali pretesti:</p>
-  <ul>
-    <li><strong>Finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
-  </ul>
+  <header>
+    <h1>PROVA</h1>
+    <nav>
+      <a href="#about">Chi siamo</a>
+      <a href="#services">Servizi</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contatti</a>
+    </nav>
+  </header>
 
-  <div class="image-container">
-    <img src="imag.jpg" alt="Immagine relativa alla tattica ClickFix" />
-  </div>
+  <section class="hero">
+    <h2>Proteggi la tua azienda dalle minacce umane</h2>
+    <p>Specialisti in Social Engineering e Cyber Security: simulazioni, formazione e protezione contro attacchi mirati.</p>
+  </section>
 
-  <ul>
-    <li><strong>Finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
-  </ul>
+  <section id="about" class="section">
+    <h2>Chi siamo</h2>
+    <p>PROVA è un team di esperti in social engineering, pronto a mettere alla prova la sicurezza umana della tua azienda con attacchi simulati e formazione mirata. La nostra missione è proteggere la tua organizzazione dai rischi legati all'ingegneria sociale, la minaccia più insidiosa e meno tangibile.</p>
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1591696205602-3728974b6d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Social Engineering Concept" />
+    </div>
+  </section>
 
-  <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
-  <ol>
-    <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-    <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-    <li>Finestre di terminale, sia CMD che PowerShell, talvolta fatte avviare tramite la scorciatoia WIN+X</li>
-  </ol>
+  <section id="services" class="section services">
+    <h2>Servizi di Social Engineering</h2>
+    <ul>
+      <li>📧 <strong>Phishing simulato:</strong> Test di email ingannevoli per valutare la resilienza del personale.</li>
+      <li>📞 <strong>Vishing:</strong> Simulazioni di telefonate fraudolente per misurare la risposta del team.</li>
+      <li>🎭 <strong>Pretexting:</strong> Creazione di scenari falsi per testare l’accesso alle informazioni riservate.</li>
+      <li>🏢 <strong>Accesso fisico simulato:</strong> Verifica delle vulnerabilità fisiche e degli accessi non autorizzati.</li>
+      <li>🎓 <strong>Formazione personalizzata:</strong> Workshop e training per sensibilizzare e proteggere il personale.</li>
+    </ul>
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1600195077900-4f4467a7f6a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Security Training" />
+    </div>
+  </section>
 
-  <p>Per proteggere i propri dispositivi da questa tattica è opportuno adottare una serie di misure preventive atte a bloccare l'attacco, in particolar modo quando sono utilizzati da utenti meno esperti. Ecco alcune delle principali difese:</p>
-  
-  <ul>
-    <li><strong>Disabilitare il comando Esegui:</strong> aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> un valore DWORD 32-bit con nome “NoRun” ed impostarlo ad 1. Questa modifica blocca le campagne che utilizzano la finestra di Esegui o la barra dell’Esplora Risorse.</li>
-    
-    <li><strong>Disabilitare CMD e PowerShell per l’utente:</strong>
-      <ul>
-        <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> un valore DWORD 32-bit con nome “DisableCMD” ed impostarlo ad 1.</li>
-        <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> un valore DWORD 32-bit con nome “DisablePowerShell” ed impostarlo ad 1.</li>
-      </ul>
-      Questa modifica impedisce l’utilizzo sia del prompt dei comandi, sia della PowerShell, bloccando anche le campagne che inducono l’utente ad aprire una finestra di terminale.
-    </li>
-    
-    <li><strong>Disabilitare la Clipboard:</strong> creare uno script in PowerShell che venga eseguito in background ad ogni avvio con il seguente codice:
-      <pre>
-while($true){
-  Set-Clipboard -Value "La Clipboard è stata disabilitata su questo dispositivo"
-  sleep 100
-}
-      </pre>
-      Questa modifica rimpiazza costantemente il valore della clipboard con il messaggio "La Clipboard è stata disabilitata su questo dispositivo", impedendo alle potenziali vittime di copiare ed incollare codice malevolo.
-    </li>
-  </ul>
+  <section id="blog" class="section blog">
+    <h2>Notizie dal nostro team</h2>
+    <article style="background:#12192f; padding:20px; border-radius:12px; margin-bottom: 20px;">
+      <h3>🧠 Il lato umano della sicurezza informatica</h3>
+      <p>Analizziamo come le vulnerabilità umane siano spesso la porta d'ingresso più facile per gli attacchi informatici.</p>
+    </article>
+    <article style="background:#12192f; padding:20px; border-radius:12px;">
+      <h3>📬 Phishing: riconoscere le email truffa</h3>
+      <p>Scopri le tecniche più comuni utilizzate per ingannare gli utenti e come proteggerti efficacemente.</p>
+    </article>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contattaci</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Messaggio</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Invia messaggio</button>
+    </form>
+    <p style="margin-top: 20px; font-style: italic;">Oppure scrivici a: <strong>info@prova.it</strong></p>
+  </section>
+
+  <footer>
+    © 2025 PROVA. Tutti i diritti riservati.
+  </footer>
 </body>
 </html>
