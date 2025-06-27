@@ -23,8 +23,8 @@
     background-color: #002b55;
     display: flex;
     justify-content: center;
-    gap: 1rem; /* più raccolto */
-    padding: 0.5rem 0; /* meno spazio verticale */
+    gap: 1rem;
+    padding: 0.75rem 0;
     z-index: 1000;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
@@ -32,7 +32,7 @@
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    font-size: 1rem; /* leggermente più piccolo */
+    font-size: 1rem;
     transition: color 0.3s ease;
   }
   nav a:hover,
@@ -146,6 +146,12 @@
     .hero p {
       font-size: 1.1rem;
     }
+    nav {
+      gap: 0.75rem;
+    }
+    nav a {
+      font-size: 0.9rem;
+    }
   }
 </style>
 </head>
@@ -154,7 +160,6 @@
 <nav>
   <a href="#chi-siamo">Chi siamo</a>
   <a href="#servizi">Servizi</a>
-  <a href="#notizie">Notizie</a>
   <a href="#contatti">Contatti</a>
 </nav>
 
@@ -189,6 +194,18 @@
       <article class="card" role="listitem" tabindex="0">
         <h3>Simulazioni di attacchi reali</h3>
         <p>Test pratici e scenari realistici per mettere alla prova la resilienza della tua organizzazione.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Phishing e spear phishing</h3>
+        <p>Simulazioni e prevenzione degli attacchi via email mirati per ingannare il personale.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Pretexting</h3>
+        <p>Strategie per riconoscere e difendersi da chi si finge una persona autorizzata per ottenere informazioni.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Tailgating e accesso fisico</h3>
+        <p>Consapevolezza e tecniche per prevenire accessi non autorizzati agli spazi aziendali.</p>
       </article>
       <article class="card" role="listitem" tabindex="0">
         <h3>Consulenza preventiva</h3>
