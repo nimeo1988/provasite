@@ -1,214 +1,52 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: rgba(245, 249, 252, 0.7); /* celeste chiaro trasparente */
-  color: #333;
-  margin: 0;
-  padding: 0;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-header {
-  background: rgba(230, 240, 255, 0.5); /* celeste chiaro trasparente */
-  color: #004080;
-  padding: 2rem 1rem;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  font-weight: 300;
-}
-
-nav {
-  background: #0073e6;
-  padding: 0.5rem 0;
-  border-radius: 6px;
-}
-
-nav ul {
-  list-style: none;
+/* Stile per articolo notizie con immagine affiancata */
+.notizia-clickfix {
   display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
-
-main, section {
-  background: rgba(230, 240, 255, 0.3); /* celeste chiaro leggermente trasparente */
-  border-radius: 8px;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #e6f0ff;
   padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
   margin-bottom: 1.5rem;
 }
 
-section h2 {
-  color: #004080;
-  border-bottom: 3px solid #0073e6;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-ul, ol {
-  padding-left: 1.3rem;
-  font-size: 1.1rem;
-}
-
-ul li {
-  margin-bottom: 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-ul li > span {
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-ul li strong {
-  color: #004080;
-}
-
-article {
-  background: #e6f0ff;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
+.notizia-clickfix img {
+  max-width: 180px;
   border-radius: 6px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
 }
 
-article h3 {
+.notizia-clickfix div {
+  flex: 1;
+}
+
+.notizia-clickfix h3 {
   margin-top: 0;
   color: #003366;
 }
 
-article p {
-  margin-bottom: 0;
-}
-
-article img {
-  max-width: 100%;
-  border-radius: 6px;
+.notizia-clickfix p {
   margin-top: 0.5rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-a {
-  color: #004080;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #ff9900;
-}
-
-form label {
-  font-weight: 600;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-form button {
-  background: #0073e6;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: #005bb5;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  padding: 1rem 0;
-  border-top: 1px solid #ddd;
-}
-
-img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-}
-
-pre {
-  background: #e6f0ff;
-  border-radius: 6px;
-  padding: 1rem;
-  font-size: 0.95rem;
-  overflow-x: auto;
-}
-
-/* Responsive per smartphone */
+/* Responsive per schermi piccoli */
 @media (max-width: 600px) {
-  nav ul {
+  .notizia-clickfix {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-
-  nav ul li {
-    margin: 0.5rem 0;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  main, body {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  
+  .notizia-clickfix img {
     max-width: 100%;
+    margin-bottom: 1rem;
   }
-
-  form input, form textarea, form button {
-    font-size: 1rem;
+  
+  .notizia-clickfix div {
+    flex: none;
   }
 }
