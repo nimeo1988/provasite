@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: rgba(245, 249, 252, 0.7); /* celeste chiaro trasparente */
@@ -81,28 +79,16 @@ ul, ol {
   font-size: 1.1rem;
 }
 
-/* Nuovo stile per la lista con emoji allineate */
-.flex-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.flex-list li {
+ul li {
+  margin-bottom: 0.7rem;
   display: flex;
   align-items: center;
-  margin-bottom: 0.7rem;
+  gap: 0.3rem;
 }
 
-.flex-list li .emoji {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
+ul li > span {
+  font-size: 1.3rem;
   line-height: 1;
-  user-select: none;
-}
-
-ul li, ol li {
-  margin-bottom: 0.7rem;
 }
 
 ul li strong {
@@ -124,6 +110,13 @@ article h3 {
 
 article p {
   margin-bottom: 0;
+}
+
+article img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
 }
 
 a {
