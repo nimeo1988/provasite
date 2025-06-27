@@ -28,12 +28,15 @@ header {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 header h1 {
   color: #2c3e50;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   font-weight: 700;
 }
 
@@ -42,6 +45,9 @@ header p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 1rem;
+  text-align: center;
+  flex-basis: 100%;
 }
 
 nav {
@@ -254,6 +260,10 @@ footer {
     margin: 1rem;
   }
   
+  header {
+    flex-direction: column;
+  }
+
   header h1 {
     font-size: 2rem;
   }
@@ -282,7 +292,6 @@ footer {
 </head>
 <body>
 <header>
-  <header style="display: flex; align-items: center; justify-content: center; gap: 10px;">
   <!-- Logo Social Engineering -->
   <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Social Engineering Logo" role="img" style="flex-shrink: 0;">
     <circle cx="32" cy="32" r="30" fill="#667eea" />
@@ -295,79 +304,67 @@ footer {
   <h1>🛡️ Proteggi la tua azienda dalle minacce umane</h1>
 </header>
 
-  <h1>🛡️ Proteggi la tua azienda dalle minacce umane</h1>
-  <p>Specialisti in Social Engineering e Cyber Security: simulazioni e formazione personalizzata.</p>
-</header>
-
 <nav>
   <ul>
     <li><a href="#chi-siamo">Chi siamo</a></li>
     <li><a href="#servizi">Servizi di Social Engineering</a></li>
     <li><a href="#notizie">📰 Notizie dal nostro team</a></li>
-    <li><a href="#contatti">Contattaci</a></li>
+    <li><a href="#contatti">Contatti</a></li>
   </ul>
 </nav>
 
 <main>
   <section id="chi-siamo" class="section-box">
-    <h2>Chi siamo</h2>
+    <h2>Social Engineering Concept</h2>
     <p>
-      PROVA è un team di esperti in social engineering, pronto a mettere alla prova la sicurezza umana della tua azienda con attacchi simulati e formazione mirata. La nostra missione è proteggere la tua organizzazione dai rischi legati all'ingegneria sociale, la minaccia più insidiosa e meno tangibile.
+      Il Social Engineering rappresenta l'arte di manipolare le persone per ottenere informazioni confidenziali o accesso a sistemi protetti. Questa tecnica sfrutta la psicologia umana piuttosto che le vulnerabilità tecniche, rendendola una delle minacce più insidiose nel panorama della cybersecurity.
+    </p>
+    <p>
+      Gli attaccanti utilizzano tecniche sofisticate come la creazione di falsa fiducia, l'urgenza artificiale, l'autorità simulata e la paura per spingere le vittime a compiere azioni che compromettono la sicurezza aziendale. La formazione e la consapevolezza sono le difese più efficaci contro queste minacce.
     </p>
   </section>
 
   <section id="servizi" class="section-box">
     <h2>Servizi di Social Engineering</h2>
     <ul>
-      <li>📧 Phishing simulato: Test di email ingannevoli per valutare la resilienza del personale.</li>
-      <li>📞 Vishing: Simulazioni di telefonate fraudolente per misurare la risposta del team.</li>
-      <li>🎭 Pretexting: Creazione di scenari falsi per testare l'accesso alle informazioni riservate.</li>
-      <li>🏢 Accesso fisico simulato: Verifica delle vulnerabilità fisiche e degli accessi non autorizzati.</li>
-      <li>🎓 Formazione personalizzata: Workshop e training per sensibilizzare e proteggere il personale.</li>
+      <li>Audit di sicurezza umana</li>
+      <li>Formazione personalizzata per il personale</li>
+      <li>Simulazioni di attacchi reali</li>
+      <li>Consulenza sulla prevenzione e mitigazione</li>
     </ul>
-  </section>
-
-  <section id="training" class="section-box">
-    <h2>Security Training</h2>
-    <p>Offriamo corsi e workshop pratici per migliorare la consapevolezza e la preparazione del tuo team. I nostri programmi di formazione sono progettati per essere coinvolgenti e pratici, utilizzando scenari reali e simulazioni interattive per garantire che il personale sviluppi le competenze necessarie per riconoscere e rispondere alle minacce di social engineering.</p>
   </section>
 
   <section id="notizie" class="section-box">
     <h2>📰 Notizie dal nostro team</h2>
     <article class="notizia-clickfix">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=150&q=80" alt="Cybersecurity" />
       <div>
-        <h3>🛡️ Difendersi dalla tattica ClickFix</h3>
-        <p>ClickFix è una tecnica di social engineering emersa nel 2024 che utilizza falsi messaggi di errore per ingannare gli utenti e farli copiare ed eseguire comandi PowerShell malevoli. Questa tattica sfrutta finestre di dialogo che simulano errori di CAPTCHA o problemi di verifica per manipolare le vittime.</p>
-        <p>La tecnica si è rapidamente diffusa tra diversi gruppi di criminali informatici e persino attori statali, distribuendo malware come DarkGate, Lumma Stealer, AsyncRAT e NetSupport RAT. La sua efficacia deriva dalla capacità di aggirare i sistemi di sicurezza tradizionali facendo leva sul fattore umano.</p>
-        <p>
-          <a href="githubnotiziaclicfix.html" target="_blank" rel="noopener noreferrer">
-            Leggi l'articolo completo sulla tattica ClickFix →
-          </a>
-        </p>
+        <h3>Nuove tecniche di difesa contro il Social Engineering</h3>
+        <p>Il nostro team ha sviluppato metodi innovativi per contrastare efficacemente gli attacchi basati sull'ingegneria sociale.</p>
+        <a href="#">Leggi di più</a>
       </div>
     </article>
   </section>
 
   <section id="contatti" class="section-box">
-    <h2>Contattaci</h2>
+    <h2>Contatti</h2>
     <form>
       <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
-      
+
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="La tua email" required />
-      
+
       <label for="messaggio">Messaggio</label>
-      <textarea id="messaggio" name="messaggio" rows="4" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-      
-      <button type="submit">📩 Invia messaggio</button>
+      <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
+      <button type="submit">Invia</button>
     </form>
-    <p style="margin-top: 2rem; text-align: center;">Oppure scrivici a: <a href="mailto:info@prova.it" style="color: #667eea; font-weight: 600;">info@prova.it</a></p>
   </section>
 </main>
 
 <footer>
-  <p>© 2025 PROVA. Tutti i diritti riservati.</p>
+  &copy; 2025 Sicurezza Aziendale - Tutti i diritti riservati
 </footer>
 </body>
 </html>
