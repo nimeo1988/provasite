@@ -23,13 +23,15 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-header h1 {
+hheader h1 {
   text-align: center;
-  color: #004080;
-  background-color: #cce0f5; /* Azzurro chiaro */
-  padding: 1rem;
-  border-radius: 8px;
+  color: #004080; /* colore testo come l'index */
+  background-color: #e6f0fa; /* azzurro chiaro per la casella */
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
 }
+
 
 }
 
