@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1100px;
   margin: auto;
   padding: 0 20px;
 }
@@ -24,23 +24,21 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #2d89ef;
-  float: left;
-}
-
-nav {
-  float: right;
+  color: #0d47a1;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   gap: 20px;
-  list-style: none;
 }
 
 nav a {
@@ -51,17 +49,17 @@ nav a {
 }
 
 nav a:hover {
-  color: #2d89ef;
+  color: #0d47a1;
 }
 
 .hero {
-  background: #f0f6ff;
+  background: #e3f2fd;
   text-align: center;
   padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 34px;
   margin-bottom: 20px;
 }
 
@@ -71,17 +69,17 @@ nav a:hover {
 }
 
 .btn {
-  background: #2d89ef;
+  background: #0d47a1;
   color: white;
   padding: 14px 28px;
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
+  border-radius: 5px;
+  font-weight: 600;
   transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #1e6fd8;
+  background: #0a357d;
 }
 
 .section {
@@ -93,21 +91,21 @@ nav a:hover {
 }
 
 .section h2 {
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 20px;
-  color: #2d2d2d;
+  color: #0d47a1;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
 .card {
   background: #ffffff;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   transition: box-shadow 0.3s;
@@ -118,7 +116,7 @@ nav a:hover {
 }
 
 .contact {
-  background: #f0f6ff;
+  background: #e3f2fd;
   text-align: center;
 }
 
