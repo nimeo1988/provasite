@@ -107,6 +107,17 @@
       background-color: #00bfff;
       color: #0a0f24;
     }
+    .blog article {
+      background:#12192f; 
+      padding:20px; 
+      border-radius:12px; 
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.2);
+    }
+    .blog article h3 {
+      margin-top: 0;
+      color: #00bfff;
+    }
     form label {
       display: block;
       margin: 18px 0 6px;
@@ -203,36 +214,35 @@
 
   <section id="blog" class="section blog">
     <h2>Notizie dal nostro team</h2>
-    <article style="background:#12192f; padding:20px; border-radius:12px; margin-bottom: 20px;">
+    <article>
       <h3>🧠 Il lato umano della sicurezza informatica</h3>
       <p>Analizziamo come le vulnerabilità umane siano spesso la porta d'ingresso più facile per gli attacchi informatici.</p>
     </article>
-    <article style="background:#12192f; padding:20px; border-radius:12px;">
-      <h3>⚠️ Quando il copia e incolla diventa un'arma: come difendersi dalla tattica ClickFix</h3>
-      <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows...</p>
-      <a href="githubnotiziaclicfix.html" style="color:#00bfff; font-weight: 700;">Leggi l'articolo completo</a>
+    <article>
+      <h3>📬 Phishing: riconoscere le email truffa</h3>
+      <p>Scopri le tecniche più comuni utilizzate per ingannare gli utenti e come proteggerti efficacemente.</p>
     </article>
   </section>
 
   <section id="contact" class="section">
     <h2>Contattaci</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="mailto:info@prova.it" method="post" enctype="text/plain">
       <label for="name">Nome</label>
       <input type="text" id="name" name="name" required />
-
+      
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
-
+      
       <label for="message">Messaggio</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
+      <textarea id="message" name="message" rows="6" required></textarea>
+      
       <button type="submit">Invia messaggio</button>
     </form>
-    <p style="margin-top: 20px; font-style: italic;">Oppure scrivici a: <strong>info@prova.it</strong></p>
+    <p style="margin-top: 20px;">Oppure scrivici a: <a href="mailto:info@prova.it" style="color:#00bfff;">info@prova.it</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 PROVA. Tutti i diritti riservati.</p>
+    © 2025 PROVA. Tutti i diritti riservati.
   </footer>
 </body>
 </html>
