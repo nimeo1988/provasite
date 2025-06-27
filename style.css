@@ -1,113 +1,145 @@
-/* Reset base */
-* {
+/* Contenitore principale centrato e larghezza massima */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
   color: #222;
-}
-
-/* Body e contenitore centrale */
-body {
-  background: #f5f9ff;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
-  padding: 20px;
+  justify-content: center;
 }
 
-main, header, footer, nav {
+main {
   max-width: 900px;
   width: 100%;
+  padding: 1rem 1.5rem 3rem;
+  box-sizing: border-box;
 }
 
 /* Header */
 header {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #004080;
+  padding: 2rem 1rem 1rem;
+  background: #003366;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 header h1 {
+  margin: 0 0 0.5rem;
   font-size: 2rem;
-  margin-bottom: 0.3rem;
 }
 
 header p {
+  margin: 0;
+  font-weight: 300;
   font-size: 1.1rem;
-  color: #0066cc;
-  font-weight: 600;
 }
 
-/* Navigazione */
+/* Nav */
+nav {
+  background: #00509e;
+  text-align: center;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  background: #007acc;
-  padding: 0.6rem 0;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 1.5rem;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background: #005fa3;
+  color: #ffd700; /* oro */
 }
 
-/* Section titoli */
-section h2 {
-  color: #004080;
-  margin-bottom: 0.8rem;
-  border-bottom: 2px solid #007acc;
+/* Caselle sezioni */
+.section-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+}
+
+/* Titoli sezioni */
+.section-box h2 {
+  color: #003366;
+  margin-top: 0;
+  border-bottom: 2px solid #00509e;
   padding-bottom: 0.3rem;
 }
 
-/* Liste servizi */
-section ul {
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 2rem;
-}
-
-section ul li {
-  background: #dcefff;
-  margin-bottom: 0.6rem;
-  padding: 0.8rem 1rem;
-  border-radius: 6px;
-  font-size: 1.05rem;
+/* Notizie ClickFix */
+.notizia-clickfix {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #e6f0ff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  margin-top: 1rem;
 }
 
-/* Emoji nei servizi */
-section ul li span {
-  font-size: 1.4rem;
+.notizia-clickfix img {
+  max-width: 180px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.notizia-clickfix div {
+  flex: 1;
+}
+
+.notizia-clickfix h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.notizia-clickfix p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Responsive per schermi piccoli */
+@media (max-width: 600px) {
+  .notizia-clickfix {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .notizia-clickfix img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .notizia-clickfix div {
+    flex: none;
+  }
 }
 
 /* Form contatti */
 form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  background: #d9e9ff;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,112,204,0.2);
-  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 form label {
@@ -115,84 +147,59 @@ form label {
   color: #003366;
 }
 
-form input,
+form input[type="text"],
+form input[type="email"],
 form textarea {
   padding: 0.6rem 0.8rem;
-  border-radius: 5px;
-  border: 1.8px solid #007acc;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
-form input:focus,
+form input[type="text"]:focus,
+form input[type="email"]:focus,
 form textarea:focus {
-  border-color: #005fa3;
   outline: none;
+  border-color: #00509e;
+  box-shadow: 0 0 5px #00509eaa;
 }
 
-form button {
-  background: #007acc;
+form button[type="submit"] {
+  background-color: #00509e;
   color: white;
-  border: none;
-  padding: 0.75rem 1.2rem;
-  font-size: 1.1rem;
   font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  align-self: flex-start;
 }
 
-form button:hover,
-form button:focus {
-  background: #005fa3;
-}
-
-/* Aggiungo emoji al bottone via ::before */
-form button::before {
-  content: "📩";
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: #003366;
 }
 
 /* Footer */
 footer {
   text-align: center;
   font-size: 0.9rem;
-  color: #555;
-  margin-top: auto;
   padding: 1rem 0;
-  border-top: 1px solid #ccc;
-  width: 100%;
-  max-width: 900px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
 }
 
-/* Link mail */
-#contatti p a {
-  color: #007acc;
-  font-weight: 600;
+/* Link nel footer */
+footer a {
+  color: #00509e;
   text-decoration: none;
 }
 
-#contatti p a:hover,
-#contatti p a:focus {
+footer a:hover,
+footer a:focus {
   text-decoration: underline;
-}
-
-/* Responsive - mobile */
-@media (max-width: 650px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 1rem 0.5rem;
-  }
-
-  section ul li {
-    font-size: 1rem;
-  }
-
-  form {
-    padding: 1rem;
-  }
 }
