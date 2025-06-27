@@ -1,52 +1,149 @@
-.notizia-clickfix {
+/* CENTRATURA GENERALE */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  background: #e6f0ff;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-  margin-bottom: 1.5rem;
-}
-
-.notizia-clickfix img {
-  max-width: 180px;
-  border-radius: 6px;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-}
-
-.notizia-clickfix div {
-  flex: 1;
-}
-
-.notizia-clickfix h3 {
-  margin-top: 0;
-  color: #003366;
-}
-
-.notizia-clickfix p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  align-items: center; /* centra tutto orizzontalmente */
   color: #333;
 }
 
-/* Responsive per schermi piccoli */
-@media (max-width: 600px) {
-  .notizia-clickfix {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .notizia-clickfix img {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  
-  .notizia-clickfix div {
-    flex: none;
-  }
+header, nav, main, footer {
+  width: 90%;
+  max-width: 900px;
+  margin: 1rem auto;
+  text-align: center;
 }
+
+/* HEADER */
+header h1 {
+  font-size: 2rem;
+  color: #00509e;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #004080;
+  margin-top: 0;
+}
+
+/* NAV MENU */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background: #007acc;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: #005a99;
+  outline: none;
+}
+
+/* Esempio emoji con il link */
+nav ul li a::before {
+  content: '🔒'; /* metti emoji generica per menu */
+  margin-right: 6px;
+}
+
+/* BOTTONE FORM */
+button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover,
+button:focus {
+  background-color: #005a99;
+  outline: none;
+}
+
+/* Aggiungi emoji al bottone tramite ::before */
+button::before {
+  content: "📨";
+}
+
+/* FORM ETICHETTE E CAMPI */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 2rem 0;
+}
+
+/* Correzione ulteriore per le liste servizi */
+#servizi ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#servizi ul li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Rimuovo gap automatico tra emoji e testo per avere attaccato */
+#servizi ul li span {
+  margin-right: 0.3rem;
+}
+
+/* Mette emoji fissa davanti ai link nel menu specifici */
+nav ul li:nth-child(1) a::before { content: "👥"; }
+nav ul li:nth-child(2) a::before { content: "🕵️‍♂️"; }
+nav ul li:nth-child(3) a::before { content: "🛠️"; }
+nav ul li:nth-child(4) a::before { content: "🎓"; }
+nav ul li:nth-child(5) a::before { content: "📰"; }
+nav ul li:nth-child(6) a::before { content: "📞"; }
