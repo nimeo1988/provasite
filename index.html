@@ -3,126 +3,56 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>🛡️ Difendersi dalla tattica ClickFix</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f9fc;
-    color: #333;
-    max-width: 900px;
-    margin: 2rem auto 3rem;
-    padding: 0 1rem;
-  }
-  header {
-    background: #004080;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  section {
-    margin-top: 2rem;
-  }
-  h2 {
-    color: #004080;
-    border-bottom: 3px solid #0073e6;
-    padding-bottom: 0.3rem;
-  }
-  p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  ul, ol {
-    padding-left: 1.3rem;
-    font-size: 1.1rem;
-  }
-  ul li, ol li {
-    margin-bottom: 0.7rem;
-  }
-  ul li strong {
-    color: #004080;
-  }
-  img {
-    display: block;
-    margin: 1rem auto;
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.15);
-  }
-  pre {
-    background: #e6f0ff;
-    border-radius: 6px;
-    padding: 1rem;
-    font-size: 0.95rem;
-    overflow-x: auto;
-  }
-  footer {
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-    border-top: 1px solid #ddd;
-    padding: 1rem 0;
-  }
-</style>
+<title>Articolo ClickFix - PROVA</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header>
-  <h1>🛡️ Quando il copia e incolla diventa un'arma: come difendersi dalla tattica ClickFix</h1>
+  <h1>🛡️ Quando il copia e incolla diventa un'arma: ClickFix</h1>
 </header>
 
-<section>
-  <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
+<main>
+  <article>
+    <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
 
-  <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi.</p>
+    <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi.</p>
 
-  <p>Gli attaccanti utilizzano due principali pretesti:</p>
+    <p>Gli attaccanti utilizzano due principali pretesti:</p>
 
-  <ul>
-    <li>🛑 <strong>Finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
-  </ul>
+    <ul>
+      <li><strong>Finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
+      <li><strong>Finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
+    </ul>
 
-  <img src="imag.jpg" alt="Immagine tattica ClickFix" />
+    <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
 
-  <ul>
-    <li>⚠️ <strong>Finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
-  </ul>
+    <ol>
+      <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
+      <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
+      <li>Finestre di terminale, sia CMD che PowerShell, talvolta fatte avviare tramite la scorciatoia WIN+X</li>
+    </ol>
 
-  <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
-  <ol>
-    <li>Finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-    <li>Barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-    <li>Finestre di terminale, sia CMD che PowerShell, talvolta fatte avviare tramite la scorciatoia WIN+X</li>
-  </ol>
+    <p>Per proteggere i propri dispositivi da questa tattica è opportuno adottare una serie di misure preventive atte a bloccare l'attacco, in particolar modo quando sono utilizzati da utenti meno esperti. Ecco alcune delle principali difese:</p>
 
-  <p>Per proteggere i propri dispositivi da questa tattica è opportuno adottare una serie di misure preventive atte a bloccare l'attacco, in particolar modo quando sono utilizzati da utenti meno esperti. Ecco alcune delle principali difese:</p>
-
-  <ul>
-    <li>🔒 <strong>Disabilitare il comando Esegui:</strong> aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> un valore DWORD 32-bit con nome <code>NoRun</code> ed impostarlo ad 1. Questa modifica blocca le campagne che utilizzano la finestra di Esegui o la barra dell’Esplora Risorse.</li>
-
-    <li>🔐 <strong>Disabilitare CMD e PowerShell per l’utente:</strong>
-      <ul>
-        <li>Aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> un valore DWORD 32-bit con nome <code>DisableCMD</code> ed impostarlo ad 1.</li>
-        <li>Aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> un valore DWORD 32-bit con nome <code>DisablePowerShell</code> ed impostarlo ad 1.</li>
-      </ul>
-      Questa modifica impedisce l’utilizzo sia del prompt dei comandi, sia della PowerShell, bloccando anche le campagne che inducono l’utente ad aprire una finestra di terminale.
-    </li>
-
-    <li>✂️ <strong>Disabilitare la Clipboard:</strong> creare uno script in PowerShell che venga eseguito in background ad ogni avvio con il seguente codice:
-      <pre>
+    <ul>
+      <li><strong>Disabilitare il comando Esegui:</strong> aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> un valore DWORD 32-bit con nome “NoRun” ed impostarlo ad 1. Questa modifica blocca le campagne che utilizzano la finestra di Esegui o la barra dell’Esplora Risorse.</li>
+      <li><strong>Disabilitare CMD e PowerShell per l’utente:</strong>
+        <ul>
+          <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> un valore DWORD 32-bit con nome “DisableCMD” ed impostarlo ad 1.</li>
+          <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> un valore DWORD 32-bit con nome “DisablePowerShell” ed impostarlo ad 1.</li>
+        </ul>
+      </li>
+      <li><strong>Disabilitare la Clipboard:</strong> creare uno script in PowerShell che venga eseguito in background ad ogni avvio con il seguente codice:
+        <pre>
 while($true){
   Set-Clipboard -Value "La Clipboard è stata disabilitata su questo dispositivo"
   sleep 100
 }
-      </pre>
-      Questa modifica rimpiazza costantemente il valore della clipboard con il messaggio "La Clipboard è stata disabilitata su questo dispositivo", impedendo alle potenziali vittime di copiare ed incollare codice malevolo.
-    </li>
-  </ul>
-</section>
+        </pre>
+      </li>
+    </ul>
+  </article>
+</main>
 
 <footer>
   <p>© 2025 PROVA. Tutti i diritti riservati.</p>
