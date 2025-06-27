@@ -1,169 +1,172 @@
-/* Reset base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* style.css */
 
 body {
-  background: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f9fc;
   color: #333;
-  line-height: 1.6;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header {
   background: #004080;
-  color: #fff;
-  padding: 30px 20px;
-  border-radius: 8px;
+  color: white;
+  padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 10px 10px;
 }
 
 header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5em;
+  margin: 0;
+  font-size: 2rem;
 }
 
 header p {
   font-size: 1.2rem;
-  font-weight: 500;
+  margin-top: 0.5rem;
+  font-weight: 300;
 }
 
 nav {
-  margin: 20px 0;
-  text-align: center;
+  background: #0073e6;
+  padding: 0.5rem 0;
+  border-radius: 6px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #004080;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
   font-weight: 600;
-  margin: 0 15px;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #ff6600;
+nav ul li a:hover {
+  color: #ffcc00;
 }
 
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 2rem;
 }
 
 section {
-  margin-bottom: 35px;
+  margin-bottom: 2.5rem;
 }
 
 section h2 {
   color: #004080;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #ff6600;
-  padding-bottom: 5px;
+  border-bottom: 3px solid #0073e6;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 
-section h3 {
-  color: #ff6600;
-  margin-bottom: 12px;
-}
-
-ul {
-  list-style: none;
-  margin-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
+ul, ol {
+  padding-left: 1.3rem;
   font-size: 1.1rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.7rem;
+}
+
+ul li strong {
+  color: #004080;
+}
+
+article {
+  background: #e6f0ff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+article h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+article p {
+  margin-bottom: 0;
+}
+
+a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff9900;
 }
 
 form label {
   font-weight: 600;
-  display: block;
-  margin-bottom: 6px;
-  color: #004080;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+form input, form textarea {
   width: 100%;
-  padding: 10px 12px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #ff6600;
-  outline: none;
-}
-
-button {
-  background-color: #ff6600;
+form button {
+  background: #0073e6;
   color: white;
-  padding: 12px 25px;
   border: none;
-  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
   font-size: 1.1rem;
   cursor: pointer;
-  font-weight: 700;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
 
-button:hover {
-  background-color: #e65c00;
+form button:hover {
+  background: #005bb5;
 }
 
 footer {
   text-align: center;
-  padding: 18px 10px;
-  background-color: #004080;
-  color: #fff;
-  border-radius: 0 0 10px 10px;
-  margin-top: 40px;
   font-size: 0.9rem;
-  font-weight: 600;
+  color: #777;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
 }
 
-/* Article styling inside Notizie */
-#notizie article {
-  background: #e9f1fb;
-  border-left: 5px solid #ff6600;
-  padding: 15px 20px;
-  margin-bottom: 18px;
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+pre {
+  background: #e6f0ff;
   border-radius: 6px;
-}
-
-#notizie article h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main {
-    padding: 20px 15px;
-  }
+  padding: 1rem;
+  font-size: 0.95rem;
+  overflow-x: auto;
 }
