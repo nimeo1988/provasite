@@ -2,9 +2,9 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PROVA - Cyber Security & Social Engineering</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROVA - Social Engineering & Cyber Security</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -12,101 +12,154 @@
       background-color: #0a0f24;
       color: #f0f2f5;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
-
     header {
       background-color: #0e1433;
-      padding: 20px;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-
     header h1 {
       margin: 0;
       font-size: 1.8rem;
       font-weight: 800;
+      letter-spacing: 2px;
+      color: #00bfff;
     }
-
     nav a {
-      margin-left: 20px;
+      margin-left: 25px;
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
     }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
-      color: white;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    nav a:hover {
       color: #00bfff;
     }
-
-    .section img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 12px;
-      margin: 20px 0;
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1581093588401-735a94f105c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: white;
+      box-shadow: inset 0 0 0 1000px rgba(10, 15, 36, 0.75);
     }
-
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: auto;
+      font-weight: 400;
+    }
+    .section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #00bfff;
+      border-bottom: 2px solid #00bfff;
+      padding-bottom: 8px;
+      font-weight: 800;
+    }
+    .section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .image-container img {
+      max-width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
+    }
     .services ul {
       list-style-type: none;
-      padding: 0;
+      padding-left: 0;
     }
-
     .services li {
       background-color: #161c3a;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .blog article {
-      background-color: #12192f;
-      padding: 15px;
+      margin: 12px 0;
+      padding: 18px 20px;
       border-radius: 10px;
-      margin-bottom: 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.1);
+      transition: background-color 0.3s ease;
+      cursor: default;
     }
-
+    .services li:hover {
+      background-color: #00bfff;
+      color: #0a0f24;
+    }
+    form label {
+      display: block;
+      margin: 18px 0 6px;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background-color: #1b2349;
+      color: #f0f2f5;
+      resize: vertical;
+      transition: background-color 0.3s ease;
+    }
+    form input:focus, form textarea:focus {
+      background-color: #27335c;
+      outline: none;
+    }
+    form button {
+      margin-top: 25px;
+      padding: 15px 30px;
+      background-color: #00bfff;
+      color: #0a0f24;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #0095d6;
+      color: white;
+    }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px 20px;
       background-color: #0e1433;
-      color: #888;
+      color: #666;
+      font-size: 0.9rem;
     }
-
-    a.button {
-      display: inline-block;
-      background: #00bfff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-top: 10px;
-      text-decoration: none;
-      font-weight: bold;
+    @media(max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -123,44 +176,58 @@
 
   <section class="hero">
     <h2>Proteggi la tua azienda dalle minacce umane</h2>
-    <p>Esperti in social engineering e cyber security. Simulazioni, analisi, formazione. Difendi la tua azienda dai rischi umani.</p>
+    <p>Specialisti in Social Engineering e Cyber Security: simulazioni, formazione e protezione contro attacchi mirati.</p>
   </section>
 
   <section id="about" class="section">
     <h2>Chi siamo</h2>
-    <p>PROVA è un team specializzato in attacchi simulati, ingegneria sociale e valutazione della sicurezza comportamentale. Aiutiamo le aziende a proteggersi da phishing, truffe, manipolazioni e intrusioni sociali.</p>
-    <img src="https://images.unsplash.com/photo-1600267165652-39fba8162626?auto=format&fit=crop&w=1350&q=80" alt="Social Engineering Image">
+    <p>PROVA è un team di esperti in social engineering, pronto a mettere alla prova la sicurezza umana della tua azienda con attacchi simulati e formazione mirata. La nostra missione è proteggere la tua organizzazione dai rischi legati all'ingegneria sociale, la minaccia più insidiosa e meno tangibile.</p>
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1591696205602-3728974b6d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Social Engineering Concept" />
+    </div>
   </section>
 
   <section id="services" class="section services">
     <h2>Servizi di Social Engineering</h2>
     <ul>
-      <li><strong>Phishing simulato:</strong> valutiamo la vulnerabilità dei dipendenti tramite email fasulle.</li>
-      <li><strong>Vishing (Voice Phishing):</strong> test tramite telefonate ingannevoli.</li>
-      <li><strong>Pretexting:</strong> creazione di scenari reali per ottenere dati sensibili.</li>
-      <li><strong>Accesso fisico simulato:</strong> test onsite di penetrazione fisica.</li>
-      <li><strong>Formazione del personale:</strong> training contro la manipolazione sociale.</li>
+      <li>📧 <strong>Phishing simulato:</strong> Test di email ingannevoli per valutare la resilienza del personale.</li>
+      <li>📞 <strong>Vishing:</strong> Simulazioni di telefonate fraudolente per misurare la risposta del team.</li>
+      <li>🎭 <strong>Pretexting:</strong> Creazione di scenari falsi per testare l’accesso alle informazioni riservate.</li>
+      <li>🏢 <strong>Accesso fisico simulato:</strong> Verifica delle vulnerabilità fisiche e degli accessi non autorizzati.</li>
+      <li>🎓 <strong>Formazione personalizzata:</strong> Workshop e training per sensibilizzare e proteggere il personale.</li>
     </ul>
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1600195077900-4f4467a7f6a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Security Training" />
+    </div>
   </section>
 
   <section id="blog" class="section blog">
     <h2>Notizie dal nostro team</h2>
-    <article>
+    <article style="background:#12192f; padding:20px; border-radius:12px; margin-bottom: 20px;">
       <h3>🧠 Il lato umano della sicurezza informatica</h3>
-      <p>Perché la social engineering è il punto debole di ogni infrastruttura. Analisi dei casi più comuni.</p>
-      <a href="https://www.linkedin.com" target="_blank" class="button">Leggi su LinkedIn</a>
+      <p>Analizziamo come le vulnerabilità umane siano spesso la porta d'ingresso più facile per gli attacchi informatici.</p>
     </article>
-    <article>
-      <h3>📬 Phishing: come riconoscere le mail truffa</h3>
-      <p>Tecniche di attacco in crescita nel 2025 e consigli pratici per evitarle.</p>
-      <a href="https://www.linkedin.com" target="_blank" class="button">Scopri di più</a>
+    <article style="background:#12192f; padding:20px; border-radius:12px;">
+      <h3>📬 Phishing: riconoscere le email truffa</h3>
+      <p>Scopri le tecniche più comuni utilizzate per ingannare gli utenti e come proteggerti efficacemente.</p>
     </article>
   </section>
 
   <section id="contact" class="section">
     <h2>Contattaci</h2>
-    <p>Email: info@prova.it</p>
-    <p>Telefono: +39 0123 456789</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Messaggio</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Invia messaggio</button>
+    </form>
+    <p style="margin-top: 20px; font-style: italic;">Oppure scrivici a: <strong>info@prova.it</strong></p>
   </section>
 
   <footer>
