@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f9fc;
+  background: rgba(245, 249, 252, 0.7); /* celeste chiaro trasparente */
   color: #333;
   margin: 0;
   padding: 0;
@@ -14,8 +14,8 @@ body {
 }
 
 header {
-  background: #004080;
-  color: white;
+  background: rgba(230, 240, 255, 0.5); /* celeste chiaro trasparente */
+  color: #004080;
   padding: 2rem 1rem;
   text-align: center;
   border-radius: 0 0 10px 10px;
@@ -62,12 +62,11 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
-main {
-  margin-top: 2rem;
-}
-
-section {
-  margin-bottom: 2.5rem;
+main, section {
+  background: rgba(230, 240, 255, 0.3); /* celeste chiaro leggermente trasparente */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 section h2 {
