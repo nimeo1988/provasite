@@ -1,98 +1,222 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PROVA - Sicurezza e Social Engineering</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PROVA - Sicurezza e Social Engineering</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f9fc;
+    color: #333;
+    margin: 0; padding: 0;
+  }
+  header {
+    background: #004080;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+  }
+  nav {
+    background: #0073e6;
+    padding: 0.5rem 0;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; padding: 0;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+  nav ul li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  section h2 {
+    color: #004080;
+    border-bottom: 3px solid #0073e6;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  ul {
+    padding-left: 1.3rem;
+  }
+  ul li {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+  }
+  ul li strong {
+    color: #004080;
+  }
+  article {
+    background: #e6f0ff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  article h3 {
+    margin-top: 0;
+    color: #003366;
+  }
+  article p {
+    margin-bottom: 0;
+  }
+  a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #ff9900;
+  }
+  form label {
+    font-weight: 600;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  form button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  form button:hover {
+    background: #005bb5;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>🛡️ Proteggi la tua azienda dalle minacce umane</h1>
-    <p>Specialisti in Social Engineering e Cyber Security: simulazioni, formazione e protezione contro attacchi mirati.</p>
-  </header>
+<header>
+  <h1>🛡️ Proteggi la tua azienda dalle minacce umane</h1>
+  <p>Specialisti in Social Engineering e Cyber Security: simulazioni, formazione e protezione contro attacchi mirati.</p>
+</header>
 
-  <nav>
+<nav>
+  <ul>
+    <li><a href="#chi-siamo">Chi siamo</a></li>
+    <li><a href="#social-engineering">Social Engineering Concept</a></li>
+    <li><a href="#servizi">Servizi di Social Engineering</a></li>
+    <li><a href="#training">Security Training</a></li>
+    <li><a href="#notizie">Notizie dal nostro team</a></li>
+    <li><a href="#contatti">Contattaci</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="chi-siamo">
+    <h2>Chi siamo</h2>
+    <p>
+      PROVA è un team di esperti in social engineering, pronto a mettere alla prova la sicurezza umana della tua azienda con attacchi simulati e formazione mirata. La nostra missione è proteggere la tua organizzazione dai rischi legati all'ingegneria sociale, la minaccia più insidiosa e meno tangibile.
+    </p>
+  </section>
+
+  <section id="social-engineering">
+    <h2>Social Engineering Concept</h2>
+  </section>
+
+  <section id="servizi">
+    <h2>Servizi di Social Engineering</h2>
     <ul>
-      <li><a href="#chi-siamo">Chi siamo</a></li>
-      <li><a href="#social-engineering">Social Engineering Concept</a></li>
-      <li><a href="#servizi">Servizi di Social Engineering</a></li>
-      <li><a href="#training">Security Training</a></li>
-      <li><a href="#notizie">Notizie dal nostro team</a></li>
-      <li><a href="#contatti">Contattaci</a></li>
+      <li>📧 <strong>Phishing simulato:</strong> Test di email ingannevoli per valutare la resilienza del personale.</li>
+      <li>📞 <strong>Vishing:</strong> Simulazioni di telefonate fraudolente per misurare la risposta del team.</li>
+      <li>🎭 <strong>Pretexting:</strong> Creazione di scenari falsi per testare l’accesso alle informazioni riservate.</li>
+      <li>🏢 <strong>Accesso fisico simulato:</strong> Verifica delle vulnerabilità fisiche e degli accessi non autorizzati.</li>
+      <li>🎓 <strong>Formazione personalizzata:</strong> Workshop e training per sensibilizzare e proteggere il personale.</li>
     </ul>
-  </nav>
+  </section>
 
-  <main>
-    <section id="chi-siamo">
-      <h2>Chi siamo</h2>
+  <section id="training">
+    <h2>Security Training</h2>
+  </section>
+
+  <section id="notizie">
+    <h2>📰 Notizie dal nostro team</h2>
+
+    <article>
+      <h3>🧠 Il lato umano della sicurezza informatica</h3>
+      <p>Analizziamo come le vulnerabilità umane siano spesso la porta d'ingresso più facile per gli attacchi informatici.</p>
+    </article>
+
+    <article>
+      <h3>📬 Phishing: riconoscere le email truffa</h3>
+      <p>Scopri le tecniche più comuni utilizzate per ingannare gli utenti e come proteggerti efficacemente.</p>
+    </article>
+
+    <article>
+      <h3>🛡️ Difendersi dalla tattica ClickFix</h3>
       <p>
-        PROVA è un team di esperti in social engineering, pronto a mettere alla prova la sicurezza umana della tua azienda con attacchi simulati e formazione mirata. La nostra missione è proteggere la tua organizzazione dai rischi legati all'ingegneria sociale, la minaccia più insidiosa e meno tangibile.
+        <a href="githubnotiziaclicfix.html" target="_blank" rel="noopener noreferrer">
+          Leggi l'articolo completo sulla tattica ClickFix →
+        </a>
       </p>
-    </section>
+    </article>
+  </section>
 
-    <section id="social-engineering">
-      <h2>Social Engineering Concept</h2>
-    </section>
+  <section id="contatti">
+    <h2>Contattaci</h2>
+    <form>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" />
 
-    <section id="servizi">
-      <h2>Servizi di Social Engineering</h2>
-      <ul>
-        <li>📧 <strong>Phishing simulato:</strong> Test di email ingannevoli per valutare la resilienza del personale.</li>
-        <li>📞 <strong>Vishing:</strong> Simulazioni di telefonate fraudolente per misurare la risposta del team.</li>
-        <li>🎭 <strong>Pretexting:</strong> Creazione di scenari falsi per testare l’accesso alle informazioni riservate.</li>
-        <li>🏢 <strong>Accesso fisico simulato:</strong> Verifica delle vulnerabilità fisiche e degli accessi non autorizzati.</li>
-        <li>🎓 <strong>Formazione personalizzata:</strong> Workshop e training per sensibilizzare e proteggere il personale.</li>
-      </ul>
-    </section>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
 
-    <section id="training">
-      <h2>Security Training</h2>
-    </section>
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" rows="4"></textarea>
 
-    <section id="notizie">
-      <h2>📰 Notizie dal nostro team</h2>
+      <button type="submit">Invia messaggio</button>
+    </form>
+    <p>Oppure scrivici a: <a href="mailto:info@prova.it">info@prova.it</a></p>
+  </section>
+</main>
 
-      <article>
-        <h3>🧠 Il lato umano della sicurezza informatica</h3>
-        <p>Analizziamo come le vulnerabilità umane siano spesso la porta d'ingresso più facile per gli attacchi informatici.</p>
-      </article>
-
-      <article>
-        <h3>📬 Phishing: riconoscere le email truffa</h3>
-        <p>Scopri le tecniche più comuni utilizzate per ingannare gli utenti e come proteggerti efficacemente.</p>
-      </article>
-
-      <article>
-        <h3>🛡️ Difendersi dalla tattica ClickFix</h3>
-        <p>
-          <a href="githubnotiziaclicfix.html" target="_blank" style="color:#004080; font-weight:bold; text-decoration:none;">
-            Leggi l'articolo completo sulla tattica ClickFix →
-          </a>
-        </p>
-      </article>
-    </section>
-
-    <section id="contatti">
-      <h2>Contattaci</h2>
-      <form>
-        <label for="nome">Nome</label><br />
-        <input type="text" id="nome" name="nome" /><br /><br />
-
-        <label for="email">Email</label><br />
-        <input type="email" id="email" name="email" /><br /><br />
-
-        <label for="messaggio">Messaggio</label><br />
-        <textarea id="messaggio" name="messaggio" rows="4"></textarea><br /><br />
-
-        <button type="submit">Invia messaggio</button>
-      </form>
-      <p>Oppure scrivici a: <a href="mailto:info@prova.it">info@prova.it</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 PROVA. Tutti i diritti riservati.</p>
-  </footer>
+<footer>
+  <p>© 2025 PROVA. Tutti i diritti riservati.</p>
+</footer>
 </body>
 </html>
