@@ -1,103 +1,61 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Notizia ClickFix - PROVA</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0a0f24;
-      color: #f0f2f5;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    h1 {
-      color: #00bfff;
-      font-weight: 900;
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      color: #00bfff;
-      font-weight: 800;
-      margin-top: 40px;
-      margin-bottom: 15px;
-    }
-    p, li {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-      font-weight: 400;
-    }
-    ul {
-      margin-left: 20px;
-      margin-bottom: 30px;
-    }
-    li {
-      margin-bottom: 12px;
-    }
-    .image-container {
-      text-align: center;
-      margin: 20px 0 40px;
-    }
-    .image-container img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Articolo ClickFix - PROVA</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Quando il copia e incolla diventa un'arma: come difendersi dalla tattica ClickFix</h1>
-  
-  <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
-  
-  <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi.</p>
-  
-  <p>Gli attaccanti utilizzano due principali pretesti:</p>
-  <ul>
-    <li><strong>Finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
-  </ul>
+<header>
+  <h1>🛡️ Quando il copia e incolla diventa un'arma: ClickFix</h1>
+</header>
 
-  <div class="image-container">
-    <img src="imag.jpg" alt="Immagine relativa alla tattica ClickFix" />
-  </div>
+<main>
+  <article>
+    <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
 
-  <ul>
-    <li><strong>Finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
-  </ul>
+    <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi.</p>
 
-  <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
-  <ol>
-    <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-    <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-    <li>Finestre di terminale, sia CMD che PowerShell, talvolta fatte avviare tramite la scorciatoia WIN+X</li>
-  </ol>
+    <p>Gli attaccanti utilizzano due principali pretesti:</p>
 
-  <p>Per proteggere i propri dispositivi da questa tattica è opportuno adottare una serie di misure preventive atte a bloccare l'attacco, in particolar modo quando sono utilizzati da utenti meno esperti. Ecco alcune delle principali difese:</p>
-  
-  <ul>
-    <li><strong>Disabilitare il comando Esegui:</strong> aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> un valore DWORD 32-bit con nome “NoRun” ed impostarlo ad 1. Questa modifica blocca le campagne che utilizzano la finestra di Esegui o la barra dell’Esplora Risorse.</li>
-    
-    <li><strong>Disabilitare CMD e PowerShell per l’utente:</strong>
-      <ul>
-        <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> un valore DWORD 32-bit con nome “DisableCMD” ed impostarlo ad 1.</li>
-        <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> un valore DWORD 32-bit con nome “DisablePowerShell” ed impostarlo ad 1.</li>
-      </ul>
-      Questa modifica impedisce l’utilizzo sia del prompt dei comandi, sia della PowerShell, bloccando anche le campagne che inducono l’utente ad aprire una finestra di terminale.
-    </li>
-    
-    <li><strong>Disabilitare la Clipboard:</strong> creare uno script in PowerShell che venga eseguito in background ad ogni avvio con il seguente codice:
-      <pre>
+    <ul>
+      <li><strong>Finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
+      <li><strong>Finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
+    </ul>
+
+    <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
+
+    <ol>
+      <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
+      <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
+      <li>Finestre di terminale, sia CMD che PowerShell, talvolta fatte avviare tramite la scorciatoia WIN+X</li>
+    </ol>
+
+    <p>Per proteggere i propri dispositivi da questa tattica è opportuno adottare una serie di misure preventive atte a bloccare l'attacco, in particolar modo quando sono utilizzati da utenti meno esperti. Ecco alcune delle principali difese:</p>
+
+    <ul>
+      <li><strong>Disabilitare il comando Esegui:</strong> aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> un valore DWORD 32-bit con nome “NoRun” ed impostarlo ad 1. Questa modifica blocca le campagne che utilizzano la finestra di Esegui o la barra dell’Esplora Risorse.</li>
+      <li><strong>Disabilitare CMD e PowerShell per l’utente:</strong>
+        <ul>
+          <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> un valore DWORD 32-bit con nome “DisableCMD” ed impostarlo ad 1.</li>
+          <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> un valore DWORD 32-bit con nome “DisablePowerShell” ed impostarlo ad 1.</li>
+        </ul>
+      </li>
+      <li><strong>Disabilitare la Clipboard:</strong> creare uno script in PowerShell che venga eseguito in background ad ogni avvio con il seguente codice:
+        <pre>
 while($true){
   Set-Clipboard -Value "La Clipboard è stata disabilitata su questo dispositivo"
   sleep 100
 }
-      </pre>
-      Questa modifica rimpiazza costantemente il valore della clipboard con il messaggio "La Clipboard è stata disabilitata su questo dispositivo", impedendo alle potenziali vittime di copiare ed incollare codice malevolo.
-    </li>
-  </ul>
+        </pre>
+      </li>
+    </ul>
+  </article>
+</main>
+
+<footer>
+  <p>© 2025 PROVA. Tutti i diritti riservati.</p>
+</footer>
 </body>
 </html>
